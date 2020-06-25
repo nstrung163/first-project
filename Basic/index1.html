@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/style1.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="heading">Survey Form</h1>
+      
+        <form action="" class="form">
+          <p class="form__desc">Let us know we can improve Free Code Camp!</p>
+          <div class="form__row">
+            <label class="form__row-label" for="">* Name:</label>
+            <div class="form__row-input ">
+              <input class="res" type="text" placeholder="Enter your name" />
+            </div>
+          </div>
+          <div class="form__row">
+            <label class="form__row-label" for="">* Email:</label>
+            <div class="form__row-input">
+              <input class="res" type="email" placeholder="Enter your Email" />
+            </div>
+          </div>
+          <div class="form__row">
+            <label class="form__row-label" for="">* Age:</label>
+            <div class="form__row-input ">
+              <input class="res" type="number" placeholder="Age" />
+            </div>
+          </div>
+          <!-- Select -->
+          <div class="form__row">
+            <label class="form__row-label left" for=""
+              >Which option best describes your current role?</label
+            >
+            <div class="form__row-input">
+              <select name="select" id="selectOpt" >
+                <optgroup label="Select an option" disabled></optgroup>
+                <option value="">Student </option>
+                <option value="">Full Time Job </option>
+                <option value="">Full Time Learner</option>
+                <option value="">Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+          <!-- Radio -->
+          <div class="form__row">
+            <label class="form__row-label left" for=""
+              >* How likely is that you would recommend FCC to a friend or
+              colleague?</label
+            >
+            <div class="form__row-input col">
+              <div class="form__row--col">
+                <input type="radio" name="chose" /> <label for="Definitely">Definitely</label>
+              </div>
+              <div class="form__row--col">
+                <input type="radio" name="chose" /> <label for="maybe">Maybe</label>
+              </div>
+              <div class="form__row--col">
+                <input type="radio" name="chose" /> <label for="notSure">Not sure</label>
+              </div>
+            </div>
+          </div>
+          <!-- Select 2 -->
+
+          <div class="form__row">
+            <label class="form__row-label" for=""
+              >What do you like most in FCC:</label
+            >
+            <div class="form__row-input">
+              <select name="select" id="selectOpt" >
+                <optgroup label="Select an option" disabled >
+                </optgroup>
+                <option value="">Challenges </option>
+                <option value="">Projects</option>
+                <option value="">Community</option>
+                <option value="">Open Source</option>
+              </select>
+            </div>
+          </div>
+          <!-- Checkbox -->
+          <div class="form__row">
+            <label class="form__row-label left" for=""
+              >Things that should be improved more in future
+              (Check all that implies):</label
+            >
+          <div class="form__row-input col">
+            <div class="form__row--col">
+              <input type="checkbox" name="chose" /> <label for="FE">Front-end Projects</label>
+            </div>
+            <div class="form__row--col">
+              <input type="checkbox" name="chose" /> <label for="BE">Back-end Projects</label>
+            </div>
+            <div class="form__row--col">
+              <input type="checkbox" name="chose" /> <label for="data">Data Visualization</label>
+            </div>
+          </div>
+      </div>
+          <!-- Comment -->
+          <div class="form__row">
+            <label class="form__row-label" for=""
+              >Any Comment or Suggestion</label
+            >
+            <div class="form__row-input">
+              <textarea
+                name="comment"
+                id="comment"
+                cols="25"
+                rows="10" placeholder="Enter your comment here..."
+              ></textarea>
+            </div>
+          </div>
+
+          <button class="btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

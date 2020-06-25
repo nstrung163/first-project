@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+.grid {
+    width: 100%;
+}
+.main {
+    width: 594px;
+    height: 434px;
+    margin: auto;
+}
+.header {
+    display: flex;
+    height: 54px;
+    background-color: #EEEEEE;
+    padding: 15px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.header__logo {
+    width: 120px ;
+    height: 30px;
+    background-color: #F5C8C8;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+
+}
+.header__menu {
+    padding-left: 10px;
+    width: 426px;
+    height: 30px;
+    background-color: #F5C8C8;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center ; 
+}
+.container {
+    height: 300px;
+    padding: 5px;
+    background-color: #EEEEEE;
+
+}
+.navbar {
+    padding: 10px;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar__nav {
+    width: 186px;
+    background-color: #F5C8C8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.navbar__hotProducts {
+    width: 360px;
+    background-color: #F5C8C8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.list {
+    margin: 0 auto;
+    padding: 8px;
+    background-color: #F5C8C8;
+    height: 200px;
+    width: 560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer {
+    margin-top: 15px;
+    height: 54px;
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
