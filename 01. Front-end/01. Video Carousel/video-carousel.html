@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/font-awesome/css/all.min.css">  
+  <link rel="stylesheet" href="styles/base.css">
+
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row d-none">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="500">
+
+		  <!-- Indicators -->
+		  <ul class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		  </ul>
+		  
+		  <!-- The slideshow -->
+		  <div class="carousel-inner">
+			<div class="carousel-item active">
+			  <img class="w-100 h-100" src="images/main-banner-website-kudvopt-1.jpg" alt="Los Angeles">
+			  <div class="carousel-caption">
+                    <a class="carousel-btn" href="#">Tham Gia</a>
+              </div>
+			</div>
+			<div class="carousel-item">
+			  <img class="w-100 h-100" src="images/main-banner-website-kudv.jpg" alt="Chicago">
+			</div>
+			<div class="carousel-item">
+			  <img class="w-100 h-100" src="images/Group 11.jpg" alt="New York">
+			</div>
+		  </div>
+		  
+		  <!-- Left and right controls -->
+		  <a class="carousel-control carousel-control-prev" href="#myCarousel" data-slide="prev">
+			<span class="carousel-control-icon carousel-control-prev-icon"></span>
+		  </a>
+		  <a class="carousel-control carousel-control-next" href="#myCarousel" data-slide="next">
+			<span class="carousel-control-icon carousel-control-next-icon"></span>
+		  </a>
+		</div>
+	</div>
+	<div class="row mt-5 video-carousel-section">
+		<h3 class="ml-auto mr-auto text-white text-center mt-4">NHỮNG SÂN CHƠI HẤP DẪN NHẤT</h3>
+		<div id="videoCarousel" class="video-carousel carousel slide ml-auto mr-auto">		  
+		  <!-- The slideshow -->
+		  <div class="carousel-inner">
+			<div class="video-carousel-item active">
+				<div class="item-content" style="background-image:url(images/game-carousel-fo4@2x.ffeaefdc.jpg);">
+					<a class="btn-play-video" data-youtube-id="3Yp_kFwuwA8"></a>
+				</div>
+ 			</div>
+			<div class="video-carousel-item next">
+				<div class="item-content" style="background-image:url(images/game-carousel-aov@2x.8c5d5402.jpg);">
+					<a class="btn-play-video" data-youtube-id="9U64fi24U6Y"></a>
+				</div>
+			</div>
+			<div class="video-carousel-item next">
+				<div class="item-content" style="background-image:url(images/game-carousel-bns@2x.88f97343.jpg);">
+					<a class="btn-play-video" data-youtube-id="mDb5b2NwyvI"></a>
+				</div>
+			</div>
+			<div class="video-carousel-item hide">
+				<div class="item-content" style="background-image:url(images/game-carousel-lol@2x.850d2756.jpg);">
+					<a class="btn-play-video" data-youtube-id="3Yp_kFwuwA8"></a>
+				</div>
+			</div>
+			<div class="video-carousel-item prev">
+				<div class="item-content" style="background-image:url(images/SHUTTERSTOCK_1193898301.jpg);">
+					<a class="btn-play-video" data-youtube-id="3Yp_kFwuwA8"></a>
+				</div>
+			</div>
+		  </div>		 
+		</div>
+	</div>	
+</div>
+<!-- FOOTER START -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="scripts/base.js"></script>
+<!-- FOOTER END -->
+</body>
+</html>

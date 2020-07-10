@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+	body {
+		margin: 0px;
+		padding: 0px;
+	}
+  
+	html, body {
+		padding: 20px;
+		font-family: sans-serif;
+	}
+
+	.feed {  
+		width: 500px; height: 473px;
+		background-image: url(http://i.imgur.com/HckmGbj.png);
+		position: relative;		
+	}
+	
+	.reaction-box {
+		position: absolute;
+		width: 312px; height: 55px;
+		background: #F0C674;
+		border-radius: 28px;
+		left: -25px; bottom: 35px;
+		display: none;
+	
+	}
+	
+	.reaction-box .reaction-icon {
+		width: 40px; 
+		height: 40px;
+		display: inline-block;
+		background: #8959A8;
+		border-radius: 20px;
+		margin: 8px -1px 0 8px;
+		text-align: center;
+		opacity: 0;
+		transform: translate(0, 100px) scale(0);
+	}
+	
+	.reaction-box .reaction-icon.show {
+		opacity: 1;
+		transform: translate(0, 0) scale(1);
+		transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+
+    .reaction-box .reaction-icon label {
+		padding: 3px 5px 3px 5px;
+		position: relative;
+		top: -24px;
+		border-radius: 10px;
+		font-size: 11px;
+		color: #FFF;
+		background: #333;
+		visibility: hidden;
+	}
+	
+	.reaction-box .reaction-icon.like {
+		background-image: url('like-icon.png');
+		background-position: -4px 192px;
+	}
+	.reaction-box .reaction-icon.love {
+		background-image: url('like-icon.png');
+		background-position: -4px 144px;
+	}
+	.reaction-box .reaction-icon.haha {
+		background-image: url('like-icon.png');
+		background-position: -4px 242px;
+	}
+	.reaction-box .reaction-icon.wow {
+		background-image: url('like-icon.png');
+		background-position: -4px 42px;
+	}
+	.reaction-box .reaction-icon.sad {
+		background-image: url('like-icon.png');
+		background-position: -4px 90px;
+	}
+	.reaction-box .reaction-icon.angry {
+		background-image: url('like-icon.png');
+		background-position: -4px 336px;
+	}
+	
+	.reaction-box .reaction-icon:hover {
+		transform: scale(1.4);
+		transform-origin: bottom;
+		transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+	
+	.reaction-box .reaction-icon:hover label {
+		visibility: visible;
+	}
+	
+	.like-btn {
+		width: 44px; height: 25px;
+		background: #D0D0D0;
+		position: absolute;
+		bottom: 13px; left: 13px;
+		cursor: pointer;
+	}
+	.like-btn:hover {
+		background: #718C00;		
+	}
+	
+	.like-btn::before {
+		content: "."; 
+		opacity: 0;
+		display: block;
+		width: 44px; height: 10px;
+		position: absolute;
+		top: -10px; left: 0;	
+	}
+	
+	.like-btn:hover .reaction-box {
+		display: block;  
+	}
+</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head> 
+<body>
+	<!-- <canvas id="myCanvas" width="600" height="200"></canvas> -->
+	<script>
+		/*
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+		var x = canvas.width / 2;
+		var y = canvas.height / 2;
+		var radius = 80;
+		var startAngle = 1 * Math.PI;
+		var endAngle = 0 * Math.PI;
+		var counterClockwise = false;
+		
+		
+		context.beginPath();
+		context.lineWidth = 10;
+		context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+
+		context.lineCap = 'round';
+		context.strokeStyle = "blue";		
+		context.stroke();
+		
+		*/
+
+	</script>
+	
+	<div class="feed">
+  <a class="like-btn">
+    <div class="reaction-box">
+		<div class="reaction-icon like">
+			<label>Like</label>
+		</div>
+		<div class="reaction-icon love">
+			<label>Love</label>
+		</div>
+		<div class="reaction-icon haha">
+			<label>Haha</label>
+		</div>
+		<div class="reaction-icon wow">
+			<label>Wow</label>
+		</div>
+		<div class="reaction-icon sad">
+			<label>Sad</label>
+		</div>
+		<div class="reaction-icon angry">
+			<label>Angry</label>
+		</div>
+    </div>
+  </a>
+</div>
+	
+	<script>
+		$(function() {
+			$(".like-btn").hover(function() {
+				$(".reaction-icon").each(function(index, element) {
+					setTimeout(function() {
+						 $(element).addClass("show");
+					}, index * 100);
+				});
+			}, function() {
+				$(".reaction-icon").removeClass("show");
+			})
+		});
+	</script>
+</body>

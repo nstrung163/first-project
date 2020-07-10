@@ -1,0 +1,168 @@
+// For ... in
+var branches = ["Apple", "Samsung", "Sony"];
+for (var branch in branches) {
+	console.log(branches[branch]);
+}
+
+
+// Variable Scope
+scope = "global";
+function checkVariableScope() {
+	scope = "local";
+	console.log(scope);
+	var myLocalVar = "myLocalVar";
+	console.log(myLocalVar);
+}
+
+checkVariableScope();
+console.log(scope);
+console.log(myLocalVar);
+
+
+// Function
+function showAlertMsg(message) {
+	alert(message);
+}
+
+showAlertMsg("My Message");
+
+
+// JS OOP
+
+// 1. Object literal
+var userInfo = {
+	firstName: "Nguyen Van",
+	lastName: "A"	
+};
+console.log("Full Name: " + userInfo.firstName + " " + userInfo.lastName);
+
+// 2. Object constructor
+function UserInfo(firstName, lastName, age) {
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.age = age;
+	this.fullName = function() {
+		return "Full Name: " + this.firstName + " " + this.lastName;
+	}
+}
+const userInfo1 = new UserInfo("Nguyen Van", "A", 20);
+userInfo1.fullName();
+
+// 3. Object.create()
+const UserInfo = {
+	fullName: function() {
+		return "Full Name: " + this.firstName + " " + this.lastName;
+	}
+}
+const userInfo2 = Object.create(UserInfo);
+userInfo2.firstName = "Nguyen Van";
+userInfo2.lastName = "B";
+userInfo2.fullName();
+
+
+// 4. Class
+class UserInfo {
+	constructor(firstName, lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+	fullName() {
+		return "Full Name: " + this.firstName + " " + this.lastName;
+	}
+}
+var userInfo3 = new UserInfo("Nguyen Van", "A"); 
+userInfo3.fullName();
+
+console.log(typeof UserInfo);
+console.log(typeof userInfo3);
+
+// 5. Encapsulation and Abstraction
+var UserInfo = function(inputFirstName, inputLastName) {
+	
+	// Private properties
+	let firstName = inputFirstName;
+	let lastName = inputLastName;
+	
+	this.getFirstName = function() {
+		return firstName;
+	}
+	this.getLastName = function() {
+		return lastName;
+	}
+	
+	var fullName = function() {
+		return "Full Name: " + firstName + " " + lastName;
+	}
+	
+	this.getFullName = function() {
+		return fullName();
+	}
+}
+var userInfo4 = new UserInfo("Nguyen Van", "A"); 
+userInfo4.getFullName();
+//userInfo4.fullName();
+
+// 6. Inheritance
+let CoreUserInfo = function(firstName, lastName) {
+	this.firstName = firstName;
+	this.lastName = lastName;
+}
+
+CoreUserInfo.prototype.getFirstName = function() {
+	console.log("My First Name is " + this.firstName);
+}
+CoreUserInfo.prototype.fullName = function() {
+	console.log(`My Full Name is ${this.firstName} ${this.lastName}`);
+}
+
+let UserInfo = function(firstName, lastName) {
+	CoreUserInfo.call(this, firstName, lastName);
+}
+UserInfo.prototype = Object.create(CoreUserInfo.prototype);
+UserInfo.prototype.getLastName = function() {
+	console.log(`My Last Name is ${this.lastName}`);
+}
+let userInfo5 = new UserInfo("Nguyen Van", "D");
+userInfo5.getFirstName();
+userInfo5.getLastName();
+userInfo5.fullName();
+
+
+
+// 7. Polymorphism
+let User1 = function () {}
+User1.prototype.say = function() {
+   return "I am a User1";
+}
+let User2 = function() {}
+User2.prototype = Object.create(User1.prototype);
+User2.prototype.say = function() {                 
+   return "I am a User2";
+}
+let User3 = function() {}
+User3.prototype = Object.create(User2.prototype);
+User3.prototype.say = function() {
+   return "I am a User3";
+}
+   
+var users = [new User1(), new User2(), new User3()];
+users.forEach(function(user){
+   console.log(user.say());
+}); 
+
+
+// Regular Expression
+const REGEX_LETTERS_ONLY = /^[- a-zA-Z_ÀÁ ÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềếéểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$/i;
+function isValidName(inputText) {
+	return REGEX_LETTERS_ONLY.test(inputText);
+}
+
+const REGEX_PASSWORD = /^.*(?=.*\d)(?=.*[a-zA-Z]).*$/i;
+function isValidPassword(inputText) {
+	return REGEX_PASSWORD.test(inputText);
+}
+
+
+
+
+
