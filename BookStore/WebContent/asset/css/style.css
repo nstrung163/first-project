@@ -1,0 +1,153 @@
+@import
+	url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap")
+	;
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+.lable-error {
+	color: red;
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+
+.navbar {
+	background-color: #343a40;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: #78b6d4;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+	color: rgb(192, 192, 192);
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+	color: #e8e8e8;
+}
+
+.container-fluid {
+	background-color: #f0f2f3;
+}
+
+.container-fluid .main {
+	background-color: #fff;
+	width: 950px;
+	min-height: 500px;
+}
+
+.heading {
+	margin-top: 10px;
+	padding: 10px 0;
+	color: #343a40;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.heading .heading_title {
+	font-weight: 400;
+	margin: 12px 0 10px 25px;
+}
+
+.heading_func {
+	display: flex;
+}
+
+.heading_func .heading_func-link a {
+	display: block;
+	background-color: #28a745;
+	width: 150px;
+	height: 40px;
+	margin: 10px 10px 5px 0;
+	text-align: center;
+	font-size: 16px;
+	line-height: 40px;
+	border-radius: 3px;
+	color: #fff;
+}
+
+.heading_func .heading_func-link a:hover {
+	text-decoration: none;
+	color: #d8d8d8;
+}
+/* form-registration */
+.title-form {
+	display: flex;
+	text-align: center;
+	font-size: 27px;
+	justify-content: center;
+	padding: 10px 0 15px 0;
+	color: #35647b;
+	margin-bottom: 20px;
+}
+
+.form-registration {
+	width: 70%;
+	background-color: #eeeeee;
+	margin: 0 auto;
+	padding: 5px;
+}
+
+.form__row {
+	display: flex;
+	margin: 20px 0;
+}
+.form__row .bookId-error {
+	margin-bottom: 0px;
+}
+
+.form__row-label {
+	width: 40%;
+	display: flex;
+	text-align: right;
+	justify-content: flex-end;
+	padding-right: 20px;
+}
+
+.form__row-input {
+	text-align: left;
+	width: 60%;
+	margin-right: 35px;
+}
+
+.res {
+	padding-left: 10px;
+	width: 70%;
+	height: 35px;
+	outline: none;
+}
+
+.form__row-input.col {
+	display: flex;
+	flex-direction: column;
+}
+
+.btn-submit {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.btn-sub {
+	background-color: #28a745;
+	color: #fff;
+	width: 100px;
+	height: 40px;
+	border: 0 solid;
+	border-radius: 5px;
+}
+
+.label-th {
+	padding: 14px 96px 15px 5px;
+}
+
+.feilds-td {
+	padding: 10px 0 10px 5px;
+	border-bottom: 1px solid #eee;
+}
